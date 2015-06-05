@@ -85,19 +85,23 @@ indb2=which(bmrg$logP.merge[intb2]>thresh)
  points(thmrg$bp[sphidx][ind]/1e6, thmrg$logP.merge[sphidx][ind], pch=18, col=colMul)
 
  lines(thmrg$bp[inth][indh]/1e6, thmrg$logP.interval[inth][indh], ylim=c(0,9.5), col=col, lwd=2)
-	 rect(65856837/1e6,0.5,66055280/1e6,1.1,col="blue")
-	 rect(64501706/1e6,0.5,64753870/1e6,1.1,col="brown")#Apba2
-	 rect(64346758/1e6,1.1,64374095/1e6,1.7,col=101)#fan1
-#	 rect(64392645/1e6,1.1,64412121/1e6,1.7,col=102)#mcee
+
+ 	 rect(64346758/1e6,1.1,64374095/1e6,1.7,col=101)#fan1
 	 rect(64376576/1e6,0.5,64392268/1e6,1.1,col=106) #mphosph10
+	 
+#	 rect(65856837/1e6,0.5,66055280/1e6,1.1,col="blue")
+	 rect(64501706/1e6,0.5,64753870/1e6,1.1,col="brown")#Apba2
+#	 rect(64346758/1e6,1.1,64374095/1e6,1.7,col=101)#fan1
+#	 rect(64392645/1e6,1.1,64412121/1e6,1.7,col=102)#mcee
+#	 rect(64376576/1e6,0.5,64392268/1e6,1.1,col=106) #mphosph10
 
 	 rect(64867052/1e6,0.5,64872997/1e6,1.1,col=107)#Ndnl2
-
+	 rect(65856837/1e6,0.5,66055280/1e6,1.1,col="blue")
 	# rect(65296165/1e6,0.5,65371239/1e6,1.1,col=570)#Tjp1
 
 
 	
-	 legend("topleft", legend=c("MA", "BA", "Pcsk6", "Apba2", "Fan1","Mphosph10","Ndnl2"), col=c(colMul, colMrg, "blue", "brown",101,106,107), pch=c(18,1,15,15,15,15,15,15,15), cex=0.71)
+	 legend("topleft", legend=c("MA", "BA", "Fan1", "Mphosph10","Apba2", "Ndnl2", "Pcsk6"), col=c(colMul, colMrg, 101, 106, "brown", 107, "blue"), pch=c(18,1,15,15,15,15,15,15,15), cex=0.71)
 	 title(main="D", adj=0)
 #	 abline(v=c(64.5,64.75,64.86,64.87, 64.2, 64.3, 64.34, 64.37))
 #	 abline(v=c(64.39, 64.41), col="red")
@@ -114,12 +118,18 @@ indb2=which(bmrg$logP.merge[intb2]>thresh)
 # ind3=which(ind %in% ind2)
  points(cmrg$bp[spcidx][ind]/1e6, cmrg$logP.merge[spcidx][ind], pch=18, col=colMul)
  lines(cmrg$bp[intc][indc]/1e6, cmrg$logP.interval[intc][indc], ylim=c(0,8.5), col=col, lwd=2)
-        rect(75237306/1e6,0.5,75288508/1e6,1.1, col=3)
-        rect(73194749/1e6,0.5,73330793/1e6,1.1, col=4)
-        rect(74754871/1e6,0.5,74952722/1e6,1.1, col=5)
-        rect(74727348/1e6,1.1,74754650/1e6,1.7, col=6)
+#        rect(75237306/1e6,0.5,75288508/1e6,1.1, col=3)#cpb2 
+#        rect(73194749/1e6,0.5,73330793/1e6,1.1, col=4)#rb1
+#        rect(74754871/1e6,0.5,74952722/1e6,1.1, col=5)#lrch1
+#        rect(74727348/1e6,1.1,74754650/1e6,1.7, col=6)#esd
+
+        rect(73194749/1e6,0.5,73330793/1e6,1.1, col=4)#rb1
+        rect(74727348/1e6,1.1,74754650/1e6,1.7, col=6)#esd
+        rect(74754871/1e6,0.5,74952722/1e6,1.1, col=5)#lrch1
+        rect(75237306/1e6,0.5,75288508/1e6,1.1, col=3)#cpb2
 
 
-        legend("topleft", legend=c("MA", "BA","Cpb2", "Rb1", "Lrch1", "Esd"), col=c(colMul, colMrg, 3,4,5,6), pch=c(18,1,15,15,15,15), cex=0.71)
+
+        legend("topleft", legend=c("MA", "BA","Rb1", "Esd", "Lrch1", "Cpb2"), col=c(colMul, colMrg, 4,6,5,3), pch=c(18,1,15,15,15,15), cex=0.71)
         title(main="E", adj=0)
  dev.off()
